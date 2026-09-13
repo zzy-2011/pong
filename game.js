@@ -9,7 +9,7 @@
   const PW = 14, PH = 80, WIN = 7;
   let you, cpu, ball, over, keys;
 
-  function reset() { you = { y: H / 2 - PH / 2 }; cpu = { y: H / 2 - PH / 2 }; ball = { x: W / 2, y: H / 2, vx: 4 * (Math.random() < 0.5 ? -1 : 1), vy: (Math.random() - 0.5) * 4 }; over = false; youEl.textContent = '0'; cpuEl.textContent = '0'; overlay.classList.add('hidden'); }
+  function reset() { you = { y: H / 2 - PH / 2 }; cpu = { y: H / 2 - PH / 2 }; ball = { x: W / 2, y: H / 2, vx: 4 * (Math.random() < 0.5 ? -1 : 1), vy: (Math.random() - 0.5) * 4 }; over = false; keys = {}; youEl.textContent = '0'; cpuEl.textContent = '0'; overlay.classList.add('hidden'); }
   function update() {
     if (over) return;
     if (keys['ArrowUp'] || keys['w']) you.y -= 7;
